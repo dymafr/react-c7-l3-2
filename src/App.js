@@ -1,17 +1,14 @@
 import React from 'react';
-import Button from 'button';
+import Button from './Button.js';
 
-function handleClick(e, from) {
+function handleClick(e) {
   console.log('CLIC', e);
-  console.log('CLIC', from);
 }
 
 function App() {
   return (
     <div className="d-flex flex-column justify-content-center align-items-center p-20">
-      <button onClick={(e) => handleClick(e, 'button')} className="mb-20">
-        Submit
-      </button>
+      <Button onButtonClick={handleClick} />
     </div>
   );
 }
